@@ -122,3 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL= 'Roles.User'
+
+LOGIN_URL = 'lg'
+LOGIN_REDIRECT_URL = '/'
