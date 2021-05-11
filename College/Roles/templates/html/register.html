@@ -7,7 +7,17 @@
 			<h3>Registration</h3>
 			<form method="POST">
 				{% csrf_token %}
-				
+				{% for n in y %}
+				<td>{{n}}</td>
+				{% endfor %}
+				<div class="row">
+					<div class="col">
+						<a href="{% url 'lg' %}" class="btn btn-info my-2">Existing User</a>
+					</div>
+					<div class="col">
+						<input type="submit" value="Subscribe" class="btn btn-success my-2">
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>

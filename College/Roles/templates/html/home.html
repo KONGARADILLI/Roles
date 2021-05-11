@@ -1,5 +1,16 @@
 {% extends 'html/base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<h3>Home page </h3>
+<div class="container mt-5">
+	<div class="jumbotron">
+		<h3>
+		{% if not user.rl == 1 %}
+		 Guest {{user.username}} HomePage 
+		{% else %}
+		 Home Page
+		 {% endif %}
+		</h3>
+		
+	</div>
+</div>
 {% endblock %}
