@@ -4,10 +4,14 @@
 <div class="container mt-5">
 	<div class="jumbotron">
 		<h3>
-		{% if not user.rl == 1 %}
-		 Guest {{user.username}} HomePage 
+			{% if user.is_superuser %}
+			SuperUser Main Page
+		{% elif not user.rl == 1 %}
+		Student {{user.username}} HomePage 
+		{% elif not user.rl == 3 %}
+		Hod Home Page
 		{% else %}
-		 Home Page
+		Guest
 		 {% endif %}
 		</h3>
 		
