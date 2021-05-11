@@ -4,10 +4,21 @@
 <div class="container mt-5">
 	<div class="card col-md-6 mx-auto shadow-lg">
 		<h3>Login</h3>
+		<div class="card-body">
 		<form method="POST">
 		{% csrf_token %}
-		{{form.as_p}}
+		<input type="text" name="username" class="form-control my-2" placeholder="Enter username">
+		<input type="password" name="password" class="form-control my-2" placeholder="Enter password">
+		<div class="row">
+			<div class="col">
+				<a href="#" class="btn btn-info col-sm">New User</a>
+			</div>
+			<div class="col">
+				<input type="submit" value="Proceed" class="form-control btn btn-success col-sm">
+			</div>
+		</div>
 		</form>
+		</div>
 	</div>
 	
 </div>
